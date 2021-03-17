@@ -1,0 +1,29 @@
+@import '../variables';
+
+.quoteContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 30vh;
+    
+    .header {
+        color: $c-primary-font-color;
+    }
+
+    .quoteBody {
+        background-color: $c-secondary;
+        border-radius: 1.5vh;
+
+        .quoteText {
+            margin: 2em;
+            color: $c-secondary-font-color;
+        }
+
+        .button {
+            border-color: red;
+            margin-bottom: 1.5em;
+        }
+    }
+}
