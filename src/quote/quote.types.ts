@@ -1,3 +1,8 @@
-export interface QuoteProps{
-    quote?: string;
+export type QuoteProps = {
+    currentQuote: string;
+    currentAuthor: string;
 }
+
+export const defaultProps: QuoteProps = {
+    
+};
