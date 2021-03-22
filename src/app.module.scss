@@ -1,5 +1,38 @@
-@import './variables';
+$c-primary: #4E5450;
+$c-secondary: #98A078;
+
+$c-primary-font-color: #98A078;
+$c-secondary-font-color: #D6C9BC;
 
 body {
     background-color: $c-primary;
+}
+
+.quoteContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    min-height: 30vh;
+    max-width: 100vh;
+    
+    h1 {
+        color: $c-primary-font-color;
+    }
+
+    .quoteBody {
+        background-color: $c-secondary;
+        border-radius: 1.5em;
+
+        .quoteText {
+            margin: 2em;
+            color: $c-secondary-font-color;
+        }
+
+        .button {
+            border-color: red;
+            margin-bottom: 1.5em;
+        }
+    }
 }
