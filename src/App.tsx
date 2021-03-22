@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import styles from "./app.module.scss";
-import { allQuotesState, quoteState } from "./App.types";
+import { allQuotesState, quoteState } from "./atoms";
 
 function App() {
   const setAllQuotes = useSetRecoilState(allQuotesState);
@@ -49,16 +49,18 @@ function QuoteBox() {
 
   return (
     <div className={styles.quoteBody}>
-      <div className={styles.quoteText}>
+      <div className={styles.quoteText + " " + styles.fadein}>
         {quote.text}
-        <div>{quote.author}</div>
+        <div>- {quote.author}</div>
       </div>
-      <button className={styles.button} onClick={doTweet}>
-        Tweet
-      </button>
-      <button className={styles.button} onClick={newQuote}>
-        New Quote
-      </button>
+      <div className={styles.buttonContainer}>
+        <button onClick={doTweet}>
+          Tweet
+        </button>
+        <button onClick={newQuote}>
+          New Quote
+        </button>
+      </div>
     </div>
   );
 }

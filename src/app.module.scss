@@ -1,38 +1,76 @@
-$c-primary: #4E5450;
-$c-secondary: #98A078;
+$primary: #e0342b;
+$secondary: #f3b842;
 
-$c-primary-font-color: #98A078;
-$c-secondary-font-color: #D6C9BC;
+$quoteBG: #fff;
 
 body {
-    background-color: $c-primary;
+  background: $primary;
 }
 
 .quoteContainer {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
     text-align: center;
-    min-height: 30vh;
-    max-width: 100vh;
-    
-    h1 {
-        color: $c-primary-font-color;
+    color: $quoteBG;
+  }
+
+  .quoteBody {
+    background-color: $quoteBG;
+    border-radius: 1em;
+    width: 40em;
+
+    .quoteText {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      font-weight: 500;
+      margin: 2em;
+      min-height: 10em;
+      color: $primary;
+      animation: fadeIn ease 2s;
+
+      div {
+        font-weight: 300;
+        padding: 1em;
+        text-align: right;
+      }
     }
 
-    .quoteBody {
-        background-color: $c-secondary;
-        border-radius: 1.5em;
+    .buttonContainer {
+      margin: 1em;
+      justify-content: right;
+      text-align: right;
 
-        .quoteText {
-            margin: 2em;
-            color: $c-secondary-font-color;
-        }
+      button {
+        font-weight: 700;
+        background-color: $primary; /* Green */
+        border-color: transparent;
+        border-radius: 1em;
+        color: $quoteBG;
+        outline: none;
+        padding: 0.75em;
+        margin: 0.5em;
+        text-align: center;
+        transition-duration: 0.4s;
 
-        .button {
-            border-color: red;
-            margin-bottom: 1.5em;
+        &:hover {
+          background-color: $secondary;
         }
+      }
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
