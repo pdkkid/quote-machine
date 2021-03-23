@@ -6,56 +6,71 @@ $bg: #fff;
 body {
   background: $primary;
   font-family: 'Roboto', sans-serif;
-  
+  overflow: hidden;
 }
 
 .quoteContainer {
-  display: flex;
-  height: 100%;
-  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+	max-width: 60vh;
+  margin: auto;
+	box-sizing: content-box;
+  text-align: center;
+  display:flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  flex-flow: column;
 
-  & .title {
+  .title {
+    margin-bottom: 1em;
     font-size: 2em;
     font-weight: bold;
     color: $bg;
   }
 
-  & .loading {
-    margin-top:1em;
+  .loading {
     animation: fadeIn ease 3s;
     font-size: 1.5em;
     font-weight: bold;
     color: $bg;
   }
 
-  & .quoteBody {
+  .quoteBody {
     background-color: $bg;
     border-radius: 1em;
+    width: inherit;
+    padding: 2em;
 
-    & .quoteText {
+    .quoteText {
       font-family: 'Open Sans', sans-serif;
       font-weight: 500;
+      font-size: 1.25em;
       color: $primary;
       animation: fadeIn ease 2s;
+      min-height: 10vh;
 
-      & div {
-        font-weight: 400;
+      div {
+        text-align: right;
+        font-weight: 200;
+        font-size: 1em;
+        margin-top: 2em;
       }
     }
 
-    & .buttonContainer {
-
-     & button {
-        font-weight: 700;
+    .buttonContainer {
+      margin-top: .5em;
+     button {
+        font-weight: 500;
         background-color: $primary; /* Green */
         border-color: transparent;
-        border-radius: 1em;
+        border-radius: .5em;
         color: $bg;
         outline: none;
         text-align: center;
         transition-duration: 0.4s;
+        font-size: 20px;
+        margin-left: 1em;
+        margin-right: 1em;
 
         &:hover {
           background-color: $secondary;
