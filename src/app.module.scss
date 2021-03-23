@@ -11,7 +11,7 @@ body {
 
 .quoteContainer {
   width: 100%;
-  min-height: 100vh;
+  min-height: 85vh;
 	max-width: 60vh;
   margin: auto;
 	box-sizing: content-box;
@@ -29,10 +29,11 @@ body {
   }
 
   .loading {
-    animation: fadeIn ease 3s;
+    animation: fadeOut ease 1s;
     font-size: 1.5em;
     font-weight: bold;
     color: $bg;
+    opacity: 0;
   }
 
   .quoteBody {
@@ -86,5 +87,14 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
