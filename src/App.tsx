@@ -25,7 +25,7 @@ function QuoteBox() {
   const [quote, setQuote] = useState<Quote>(newQuote());
   
   const doTweet = () => {
-    console.log("Did the Tweet");
+    window.location.assign('https://twitter.com/intent/tweet?text=' + quote.quote + "\r\n -" + quote.author);
   };
 
   const handleNewQuote = useCallback(() => {
@@ -39,10 +39,10 @@ function QuoteBox() {
         <div>- {quote.author}</div>
       </div>
       <div className={styles.buttonContainer}>
-        <button onClick={doTweet}>
+        <button className={styles.button} onClick={doTweet}>
           Tweet
         </button>
-        <button onClick={handleNewQuote}>
+        <button className={styles.button} onClick={handleNewQuote}>
           New Quote
         </button>
       </div>

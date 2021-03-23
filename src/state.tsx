@@ -1,4 +1,3 @@
-import { waitFor } from "@testing-library/dom";
 import { selector } from "recoil";
 
 // List of quotes interface
