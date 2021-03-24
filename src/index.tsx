@@ -17,7 +17,7 @@ ReactDOM.render(
 function Source() {
   return (
     <div className={styles.source}>
-      <a href="https://github.com/pdkkid/quote-machine">Source</a>
+      <a href="https://github.com/pdkkid/quote-machine" target="_blank" rel="noreferrer noopener" >Source</a>
     </div>
   );
 }

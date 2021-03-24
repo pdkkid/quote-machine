@@ -25,7 +25,7 @@ function QuoteBox() {
   const [quote, setQuote] = useState<Quote>(newQuote());
   
   const doTweet = () => {
-    window.location.assign('https://twitter.com/intent/tweet?text=' + quote.quote + "\r\n -" + quote.author);
+    window.open('https://twitter.com/intent/tweet?text=' + quote.quote + "\r\n -" + quote.author);
   };
 
   const handleNewQuote = useCallback(() => {
